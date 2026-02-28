@@ -46,8 +46,8 @@ export const Contact = () => {
                     className="space-y-16"
                 >
                     <div className="space-y-8">
-                        <div className="inline-flex items-center gap-3 px-3 py-1 bg-white/5 border border-white/5 rounded-full">
-                            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">Protocol 04 // Contact</span>
+                        <div className="inline-flex items-center gap-3 px-3 py-1 bg-white/10 border border-white/15 rounded-full">
+                            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/80">Protocol 04 // Contact</span>
                         </div>
                         <h2 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.85]">
                             Con <br />
@@ -87,7 +87,7 @@ export const Contact = () => {
                     <div className="p-2 border border-white/5 bg-white/[0.01] backdrop-blur-3xl rounded-none">
                         <form ref={form} onSubmit={sendEmail} className="space-y-12 p-8 md:p-12">
                             <div className="space-y-6">
-                                <label className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20">01 // Identity</label>
+                                <label className="text-[10px] font-black uppercase tracking-[0.4em] text-white/70">01 // Identity</label>
                                 <input
                                     type="text"
                                     name="name"
@@ -98,7 +98,7 @@ export const Contact = () => {
                                 />
                             </div>
                             <div className="space-y-6">
-                                <label className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20">02 // Frequency</label>
+                                <label className="text-[10px] font-black uppercase tracking-[0.4em] text-white/70">02 // Frequency</label>
                                 <input
                                     type="email"
                                     name="userEmail"
@@ -109,7 +109,7 @@ export const Contact = () => {
                                 />
                             </div>
                             <div className="space-y-6">
-                                <label className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20">03 // Core Signal</label>
+                                <label className="text-[10px] font-black uppercase tracking-[0.4em] text-white/70">03 // Core Signal</label>
                                 <textarea
                                     name="notes"
                                     required
@@ -150,11 +150,11 @@ export const Contact = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
-                className="mt-32 pt-12 border-t border-white/5 flex flex-col items-center gap-4 text-center"
+                className="mt-32 pt-12 border-t border-white/15 flex flex-col items-center gap-4 text-center"
             >
-                <div className="text-[9px] font-black uppercase tracking-[0.4em] text-white/10 underline underline-offset-8">Authority Status: Verified</div>
-                <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/30">
-                    S.Dharsan // <span className="text-white/60">Lead Architect</span>
+                <div className="text-[9px] font-black uppercase tracking-[0.4em] text-white/40 underline underline-offset-8">Authority Status: Verified</div>
+                <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/60">
+                    S.Dharsan // <span className="text-white/90">Lead Architect</span>
                 </div>
             </motion.div>
         </div>

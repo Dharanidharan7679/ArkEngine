@@ -40,8 +40,8 @@ export const Portfolio = () => {
                 animate={{ opacity: 1, x: 0 }}
                 className="mb-20 space-y-6"
             >
-                <div className="inline-block px-3 py-1 bg-white/5 border border-white/5 rounded-full">
-                    <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">Protocol 03 // Archive</span>
+                <div className="inline-block px-3 py-1 bg-white/10 border border-white/10 rounded-full">
+                    <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/80">Protocol 03 // Archive</span>
                 </div>
                 <h2 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.85]">
                     Global <br />
@@ -64,8 +64,8 @@ export const Portfolio = () => {
                         className="group relative flex flex-col bg-background p-10 hover:bg-white/[0.01] transition-all"
                     >
                         <div className="flex justify-between items-start mb-12">
-                            <span className="text-[10px] font-mono text-white/20 group-hover:text-white transition-colors">#{project.id}</span>
-                            <ArrowUpRight className="w-4 h-4 text-white/5 group-hover:text-white transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                            <span className="text-[10px] font-mono text-white/60 group-hover:text-white transition-colors">#{project.id}</span>
+                            <ArrowUpRight className="w-4 h-4 text-white/30 group-hover:text-white transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </div>
 
                         <div className="h-24 flex items-center justify-start mb-12">
@@ -76,9 +76,9 @@ export const Portfolio = () => {
                             <h3 className="text-xl font-bold uppercase tracking-tight text-white/40 group-hover:text-white transition-colors">
                                 {project.company}
                             </h3>
-                            <div className="flex items-center justify-between pt-6 border-t border-white/5">
-                                <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/10">{project.category}</span>
-                                <span className="text-[9px] font-mono text-white/10 group-hover:text-white/40 transition-colors uppercase">{project.year}</span>
+                            <div className="flex items-center justify-between pt-6 border-t border-white/15">
+                                <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/60">{project.category}</span>
+                                <span className="text-[9px] font-mono text-white/60 group-hover:text-white/90 transition-colors uppercase">{project.year}</span>
                             </div>
                         </div>
 
@@ -95,7 +95,7 @@ export const Portfolio = () => {
                 transition={{ delay: 1 }}
                 className="mt-24 text-center"
             >
-                <p className="text-[10px] font-black uppercase tracking-[0.5em] text-white/5">Selective Portfolio // Confidential Segments Omitted</p>
+                <p className="text-[10px] font-black uppercase tracking-[0.5em] text-white/50">Selective Portfolio // Confidential Segments Omitted</p>
             </motion.div>
         </div>
     )

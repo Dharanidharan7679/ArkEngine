@@ -21,14 +21,14 @@ export const Home = () => {
                     transition={{ duration: 1.2, ease: "easeOut" }}
                     className="space-y-6"
                 >
-                    <div className="inline-flex items-center gap-4 px-4 py-1.5 border border-white/5 bg-white/5 backdrop-blur-xl rounded-full">
-                        <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">Initiating Discovery // Phase 01</span>
+                    <div className="inline-flex items-center gap-4 px-4 py-1.5 border border-white/10 bg-white/5 backdrop-blur-xl rounded-full">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/80">Initiating Discovery // Phase 01</span>
                     </div>
 
                     <div className="space-y-4">
                         <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-[0.85] tracking-tighter uppercase">
                             Modern <br />
-                            <span className="italic lowercase font-normal opacity-70 tracking-normal">Engineering</span> <br />
+                            <span className="italic uppercase font-normal opacity-90 tracking-normal text-white">Engineering</span> <br />
                             Standard
                         </h1>
                     </div>
@@ -65,7 +65,7 @@ export const Home = () => {
             {/* Aesthetic Detail: Technical Specs */}
             <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 0.2 }}
+                animate={{ opacity: 0.6 }}
                 transition={{ delay: 1.5 }}
                 className="absolute bottom-12 left-6 hidden lg:flex flex-col gap-1 text-[8px] font-mono tracking-widest uppercase text-white"
             >
@@ -76,7 +76,7 @@ export const Home = () => {
 
             <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 0.2 }}
+                animate={{ opacity: 0.6 }}
                 transition={{ delay: 1.5 }}
                 className="absolute bottom-12 right-6 hidden lg:flex flex-col gap-1 text-[8px] font-mono tracking-widest uppercase text-white text-right"
             >

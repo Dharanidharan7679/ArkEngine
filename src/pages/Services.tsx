@@ -36,8 +36,8 @@ export const Services = () => {
                     animate={{ opacity: 1, x: 0 }}
                     className="max-w-3xl space-y-6"
                 >
-                    <div className="inline-block px-3 py-1 bg-white/5 border border-white/5 rounded-full">
-                        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">Protocol 02 // Capabilities</span>
+                    <div className="inline-block px-3 py-1 bg-white/10 border border-white/10 rounded-full">
+                        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/80">Protocol 02 // Capabilities</span>
                     </div>
                     <h2 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.85]">
                         The <span className="italic font-normal opacity-70 lowercase tracking-normal">Execution</span> <br />
@@ -67,8 +67,8 @@ export const Services = () => {
                     >
                         {/* ID & Label */}
                         <div className="lg:col-span-2 flex items-center gap-6">
-                            <span className="text-[10px] font-mono text-white/20 group-hover:text-white transition-colors">#{item.id}</span>
-                            <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/10 group-hover:text-white/40 transition-colors">{item.tag}</span>
+                            <span className="text-[10px] font-mono text-white/60 group-hover:text-white transition-colors">#{item.id}</span>
+                            <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/40 group-hover:text-white/80 transition-colors">{item.tag}</span>
                         </div>
 
                         {/* Title */}
@@ -80,7 +80,7 @@ export const Services = () => {
 
                         {/* Description */}
                         <div className="lg:col-span-5 mt-4 lg:mt-0">
-                            <p className="text-base text-white/30 group-hover:text-white/60 transition-colors leading-relaxed font-medium">
+                            <p className="text-base text-white/90 group-hover:text-white/60 transition-colors leading-relaxed font-bold">
                                 {item.desc}
                             </p>
                         </div>
@@ -105,7 +105,7 @@ export const Services = () => {
                     { icon: Zap, label: 'Instant Sync' },
                     { icon: Globe, label: 'Global Grid' }
                 ].map((stat, i) => (
-                    <div key={i} className="flex items-center gap-3 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all cursor-default">
+                    <div key={i} className="flex items-center gap-3 grayscale-0 opacity-80 hover:opacity-100 transition-all cursor-default">
                         <stat.icon size={16} />
                         <span className="text-[10px] font-black uppercase tracking-[0.3em]">{stat.label}</span>
                     </div>
