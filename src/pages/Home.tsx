@@ -26,7 +26,7 @@ export const Home = () => {
                     </div>
 
                     <div className="space-y-4">
-                        <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter uppercase">
+                        <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-[0.85] tracking-tighter uppercase">
                             Modern <br />
                             <span className="font-serif italic lowercase font-normal opacity-40 tracking-normal">Engineering</span> <br />
                             Standard
