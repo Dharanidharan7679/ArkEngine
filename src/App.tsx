@@ -1,56 +1,20 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
-import { Cpu } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { VantaBackground } from './components/VantaBackground'
 import { Home } from './pages/Home'
 import { Services } from './pages/Services'
-// import { Crew } from './pages/Crew' - REMOVED
 import { Contact } from './pages/Contact'
 import { Portfolio } from './pages/Portfolio'
 import logo from './assets/logo.png'
 
-// Typography Import
 const fontImport = document.createElement('link')
 fontImport.rel = 'stylesheet'
-fontImport.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
+fontImport.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap'
 document.head.appendChild(fontImport)
-
-const ScrollNavigator = () => {
-    const navigate = useNavigate()
-    const location = useLocation()
-    const lastScrollTime = useRef(0)
-    const cooldown = 1500 // ms
-
-    const pages = ['/', '/services', '/portfolio', '/contact']
-
-    useEffect(() => {
-        const handleWheel = (e: WheelEvent) => {
-            const now = Date.now()
-            if (now - lastScrollTime.current < cooldown) return
-
-            const currentIndex = pages.indexOf(location.pathname)
-            if (currentIndex === -1) return
-
-            if (e.deltaY > 50 && currentIndex < pages.length - 1) {
-                lastScrollTime.current = now
-                navigate(pages[currentIndex + 1])
-            } else if (e.deltaY < -50 && currentIndex > 0) {
-                lastScrollTime.current = now
-                navigate(pages[currentIndex - 1])
-            }
-        }
-
-        window.addEventListener('wheel', handleWheel)
-        return () => window.removeEventListener('wheel', handleWheel)
-    }, [location.pathname, navigate])
-
-    return null
-}
 
 const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
     useEffect(() => {
-        const timer = setTimeout(onComplete, 2500)
+        const timer = setTimeout(onComplete, 2200)
         return () => clearTimeout(timer)
     }, [onComplete])
 
@@ -58,29 +22,16 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
         <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black flex flex-col items-center justify-center font-mono selection:bg-white selection:text-black"
+            className="fixed inset-0 z-[100] bg-black flex items-center justify-center font-mono"
         >
-            <div className="w-full max-w-sm space-y-4 px-6">
-                <div className="flex justify-between items-center text-[10px] text-white/40">
-                    <span className="animate-pulse">BOOTING ARK_PROTOCOL...</span>
-                    <span>v4.0.5</span>
-                </div>
-
-                <div className="h-0.5 w-full bg-white/5 overflow-hidden">
-                    <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: "100%" }}
-                        transition={{ duration: 2, ease: "easeInOut" }}
-                        className="h-full bg-white"
-                    />
-                </div>
-
-                <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-[8px] text-white/20 uppercase tracking-widest">
-                    <span>{">"} CORE_INIT: OK</span>
-                    <span>{">"} NEURAL_SYNC: RUNNING</span>
-                    <span>{">"} ARK_ENGINE: ACTIVE</span>
-                    <span>{">"} PROTOCOL: ARCHANGEL</span>
-                </div>
+            <div className="flex flex-col items-center gap-8">
+                <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    className="h-px w-64 bg-white/40"
+                />
+                <div className="text-[10px] tracking-[0.5em] text-white/60 animate-pulse">ARK ENGINE SYSTEM_INIT</div>
             </div>
         </motion.div>
     )
@@ -91,72 +42,64 @@ const AppContent = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     return (
-        <div className="relative h-screen bg-black text-white font-outfit selection:bg-white selection:text-black overflow-hidden">
+        <div className="relative h-screen bg-black text-white selection:bg-white selection:text-black overflow-hidden font-inter">
             <AnimatePresence>
                 {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
             </AnimatePresence>
 
             {!isLoading && (
                 <>
-                    <ScrollNavigator />
-                    {location.pathname === '/' && <VantaBackground />}
-
-                    <nav className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/5">
-                        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-                            <Link to="/" className="flex items-center gap-2">
-                                <div className="w-10 h-10 flex items-center justify-center">
-                                    <img
-                                        src={logo}
-                                        alt="Ark Engine Logo"
-                                        className="w-full h-full object-contain"
-                                    />
-                                </div>
-                                <span className="text-xl font-black tracking-tighter uppercase whitespace-nowrap">ARK ENGINE</span>
-                            </Link>
-
-                            <div className="hidden md:flex items-center gap-8 text-[10px] font-bold tracking-[0.2em] uppercase text-white/40">
-                                {[
-                                    { name: 'Home', path: '/' },
-                                    { name: 'Services', path: '/services' },
-                                    { name: 'Portfolio', path: '/portfolio' },
-                                    { name: 'Ark AI', url: 'https://ai.arkengine.com' }, // Placeholder URL
-                                    { name: 'Contact', path: '/contact' },
-                                ].map((item) => {
-                                    if ('url' in item) {
-                                        return (
-                                            <a
-                                                key={item.name}
-                                                href={item.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="hover:text-white transition-colors"
-                                            >
-                                                {item.name}
-                                            </a>
-                                        )
-                                    }
-                                    return (
-                                        <Link
-                                            key={item.path}
-                                            to={item.path}
-                                            className={`hover:text-white transition-colors ${location.pathname === item.path ? 'text-white' : ''}`}
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    )
-                                })}
+                    <nav className="fixed top-0 w-full z-50 px-12 h-20 flex items-center justify-between border-b border-white/[0.03] backdrop-blur-xl">
+                        <Link to="/" className="flex items-center gap-4 group">
+                            <div className="w-10 h-10 flex items-center justify-center">
+                                <img src={logo} alt="Ark Engine" className="w-full h-full object-contain filter invert opacity-60 group-hover:opacity-100 transition-opacity" />
                             </div>
+                            <span className="text-xl font-black tracking-tighter uppercase group-hover:tracking-widest transition-all">ARK ENGINE</span>
+                        </Link>
+
+                        <div className="hidden md:flex items-center gap-12 text-[10px] font-black tracking-[0.4em] uppercase">
+                            {[
+                                { name: 'Home', path: '/' },
+                                { name: 'Capabilities', path: '/services' },
+                                { name: 'The Archive', path: '/portfolio' },
+                                { name: 'Sync Mission', path: '/contact' },
+                            ].map((item) => (
+                                <Link
+                                    key={item.path}
+                                    to={item.path}
+                                    className={`relative hover:text-white transition-colors py-2 ${location.pathname === item.path ? 'text-white' : 'text-white/30'}`}
+                                >
+                                    {item.name}
+                                    {location.pathname === item.path && (
+                                        <motion.div layoutId="underline" className="absolute bottom-0 left-0 w-full h-px bg-white/40" />
+                                    )}
+                                </Link>
+                            ))}
                         </div>
                     </nav>
 
-                    <main className="relative z-10 h-full">
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/services" element={<Services />} />
-                            <Route path="/portfolio" element={<Portfolio />} />
-                            <Route path="/contact" element={<Contact />} />
-                        </Routes>
+                    <main className="relative z-10 h-full pt-20">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={location.pathname}
+                                initial={{ opacity: 0, scale: 0.98 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 1.02 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                className="h-full"
+                            >
+                                <Routes location={location}>
+                                    <Route path="/" element={<Home />} />
+                                    <Route path="/services" element={<Services />} />
+                                    <Route path="/portfolio" element={<Portfolio />} />
+                                    <Route path="/contact" element={<Contact />} />
+                                </Routes>
+                            </motion.div>
+                        </AnimatePresence>
                     </main>
+
+                    {/* Architectural Grid Overlay */}
+                    <div className="absolute inset-0 z-0 bg-grid opacity-20 pointer-events-none" />
                 </>
             )}
         </div>

@@ -4,29 +4,36 @@
 
 @layer base {
     :root {
-        --background: 0 0% 0%;
-        --background-soft: 232 25% 5%;
-        /* #0a0b10 */
+        /* Premium Neutral Charcoal Palette */
+        --background: 240 10% 3.5%;
+        /* #09090b - Ultra dark near-black */
+        --background-soft: 240 10% 6%;
+        /* #0e0e11 */
         --foreground: 0 0% 100%;
         --primary: 0 0% 100%;
         --primary-foreground: 0 0% 0%;
-        --muted: 232 15% 15%;
+        --muted: 240 5% 12%;
+        /* #1d1d21 */
         --border: 0 0% 100%;
-        --secondary: 232 20% 10%;
+        --secondary: 240 5% 8%;
         --secondary-foreground: 0 0% 100%;
-        --accent: 232 50% 60%;
+        --accent: 210 100% 50%;
+        /* Pure tech blue accents */
         --accent-foreground: 0 0% 100%;
     }
 }
 
 @layer base {
     * {
-        @apply border-white/10;
+        @apply border-white/5;
+        /* Whisper-thin borders */
     }
 
     body {
         @apply bg-background text-foreground antialiased selection:bg-white/10;
         font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        letter-spacing: -0.01em;
     }
 
     h1,
@@ -39,6 +46,11 @@
         @apply tracking-tighter uppercase font-black;
     }
 
+    .font-serif {
+        font-family: 'Playfair Display', serif;
+        /* Cinematic pairing */
+    }
+
     p,
     span,
     div,
@@ -48,16 +60,18 @@
     }
 }
 
+/* Premium Utilities */
 .glass {
-    @apply bg-white/[0.02] backdrop-blur-2xl border border-white/[0.05];
+    @apply bg-white/[0.01] backdrop-blur-[40px] border border-white/[0.03];
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.01);
 }
 
 .glass-dark {
-    @apply bg-black/40 backdrop-blur-3xl border border-white/5;
+    @apply bg-black/60 backdrop-blur-[60px] border border-white/[0.04];
 }
 
 .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-white/30;
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white/90 to-white/40;
 }
 
 .bg-soft {
@@ -65,12 +79,14 @@
 }
 
 .bg-grid {
-    background-size: 60px 60px;
+    background-size: 100px 100px;
+    /* Larger, more architectural grid */
     background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 }
 
+/* Animations */
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -82,5 +98,22 @@
 }
 
 .animate-marquee {
-    animation: marquee 30s linear infinite;
+    animation: marquee 60s linear infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
