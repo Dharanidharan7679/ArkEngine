@@ -39,8 +39,8 @@ export const Services = () => {
                     <div className="inline-block px-3 py-1 bg-white/5 border border-white/5 rounded-full">
                         <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">Protocol 02 // Capabilities</span>
                     </div>
-                    <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-[0.85]">
-                        The <span className="font-serif italic font-normal opacity-40 lowercase tracking-normal">Execution</span> <br />
+                    <h2 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.85]">
+                        The <span className="italic font-normal opacity-70 lowercase tracking-normal">Execution</span> <br />
                         Standard.
                     </h2>
                 </motion.div>

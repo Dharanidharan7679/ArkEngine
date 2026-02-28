@@ -43,9 +43,9 @@ export const Portfolio = () => {
                 <div className="inline-block px-3 py-1 bg-white/5 border border-white/5 rounded-full">
                     <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">Protocol 03 // Archive</span>
                 </div>
-                <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-[0.85]">
+                <h2 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.85]">
                     Global <br />
-                    <span className="font-serif italic font-normal opacity-40 lowercase tracking-normal">Deployed</span> <br />
+                    <span className="italic font-normal opacity-70 lowercase tracking-normal">Deployed</span> <br />
                     Grid.
                 </h2>
             </motion.div>

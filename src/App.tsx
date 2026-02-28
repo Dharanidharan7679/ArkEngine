@@ -9,7 +9,7 @@ import logo from './assets/logo.png'
 
 const fontImport = document.createElement('link')
 fontImport.rel = 'stylesheet'
-fontImport.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap'
+fontImport.href = 'https://fonts.googleapis.com/css2?family=Space+Grotesque:wght@300;400;500;600;700&display=swap'
 document.head.appendChild(fontImport)
 
 const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
@@ -42,7 +42,7 @@ const AppContent = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     return (
-        <div className="relative h-screen bg-black text-white selection:bg-white selection:text-black overflow-hidden font-inter">
+        <div className="relative h-screen bg-black text-white selection:bg-white selection:text-black overflow-hidden font-['Space_Grotesque']">
             <AnimatePresence>
                 {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
             </AnimatePresence>

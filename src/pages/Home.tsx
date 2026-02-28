@@ -26,9 +26,9 @@ export const Home = () => {
                     </div>
 
                     <div className="space-y-4">
-                        <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-[0.85] tracking-tighter uppercase">
+                        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-[0.85] tracking-tighter uppercase">
                             Modern <br />
-                            <span className="font-serif italic lowercase font-normal opacity-40 tracking-normal">Engineering</span> <br />
+                            <span className="italic lowercase font-normal opacity-70 tracking-normal">Engineering</span> <br />
                             Standard
                         </h1>
                     </div>
@@ -40,7 +40,7 @@ export const Home = () => {
                     transition={{ delay: 0.8, duration: 1 }}
                     className="flex flex-col items-center space-y-8"
                 >
-                    <p className="text-lg md:text-xl text-white/40 font-medium max-w-2xl leading-relaxed tracking-tight">
+                    <p className="text-lg md:text-xl text-white/70 font-medium max-w-2xl leading-relaxed tracking-tight">
                         Ark Engine designs and deploys the deep-tech infrastructure powering the worlds most ambitious autonomous intelligence systems.
                     </p>
 

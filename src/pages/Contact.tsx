@@ -49,24 +49,24 @@ export const Contact = () => {
                         <div className="inline-flex items-center gap-3 px-3 py-1 bg-white/5 border border-white/5 rounded-full">
                             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">Protocol 04 // Contact</span>
                         </div>
-                        <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-[0.85]">
+                        <h2 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.85]">
                             Sync <br />
-                            <span className="font-serif italic font-normal opacity-40 lowercase tracking-normal">Mission</span>.
+                            <span className="italic font-normal opacity-70 lowercase tracking-normal">Mission</span>.
                         </h2>
-                        <p className="text-lg text-white/30 max-w-md leading-relaxed font-medium">
+                        <p className="text-lg text-white/70 max-w-md leading-relaxed font-medium">
                             The signal is open for elite ventures, institutional scale-ups, and specialized deep-tech engineering queries.
                         </p>
                     </div>
 
                     {/* Minimal Info Links */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 border-t border-white/5 pt-12">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 border-t border-white/10 pt-12">
                         <div className="space-y-4">
-                            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/10 underline underline-offset-8">Frequency</span>
-                            <div className="text-base font-bold text-white/80">arkenginetechnologies@gmail.com</div>
+                            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 underline underline-offset-8">Frequency</span>
+                            <div className="text-base font-bold text-white/90">arkenginetechnologies@gmail.com</div>
                         </div>
                         <div className="space-y-4">
-                            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/10 underline underline-offset-8">Direct</span>
-                            <div className="text-base font-bold text-white/80">+91 97894 48211</div>
+                            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 underline underline-offset-8">Direct</span>
+                            <div className="text-base font-bold text-white/90">+91 97894 48211</div>
                         </div>
                     </div>
 
