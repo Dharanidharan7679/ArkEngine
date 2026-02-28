@@ -7,7 +7,7 @@ export const Home = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="relative h-full flex flex-col items-center justify-center max-w-7xl mx-auto px-6 overflow-hidden">
+        <div className="relative min-h-[calc(100vh-80px)] flex flex-col items-center justify-center max-w-7xl mx-auto px-6">
 
             {/* Cinematic Vanta Clouds (The "Same Home Page of Cloud") */}
             <VantaBackground />

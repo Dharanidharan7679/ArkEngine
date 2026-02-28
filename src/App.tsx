@@ -42,7 +42,7 @@ const AppContent = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     return (
-        <div className="relative h-screen bg-black text-white selection:bg-white selection:text-black overflow-hidden font-['Space_Grotesque']">
+        <div className="relative min-h-screen bg-black text-white selection:bg-white selection:text-black font-['Space_Grotesque']">
             <AnimatePresence>
                 {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
             </AnimatePresence>
@@ -78,7 +78,7 @@ const AppContent = () => {
                         </div>
                     </nav>
 
-                    <main className="relative z-10 h-full pt-20">
+                    <main className="relative z-10 pt-20">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={location.pathname}
@@ -86,7 +86,7 @@ const AppContent = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 1.02 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="h-full"
+                                className="min-h-[calc(100vh-80px)]"
                             >
                                 <Routes location={location}>
                                     <Route path="/" element={<Home />} />
@@ -99,7 +99,7 @@ const AppContent = () => {
                     </main>
 
                     {/* Architectural Grid Overlay */}
-                    <div className="absolute inset-0 z-0 bg-grid opacity-20 pointer-events-none" />
+                    <div className="fixed inset-0 z-0 bg-grid opacity-20 pointer-events-none" />
                 </>
             )}
         </div>

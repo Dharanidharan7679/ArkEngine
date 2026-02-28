@@ -32,7 +32,8 @@ const ProjectLogo = ({ project }: { project: any }) => {
 
 export const Portfolio = () => {
     return (
-        <div className="h-full flex flex-col justify-center max-w-7xl mx-auto px-6 pt-24 pb-12 overflow-y-auto custom-scrollbar">
+    return (
+        <div className="flex flex-col justify-center max-w-7xl mx-auto px-6 pt-32 pb-24">
 
             {/* Header: Act IV - The Archive */}
             <motion.div

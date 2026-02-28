@@ -33,7 +33,8 @@ export const Contact = () => {
     }
 
     return (
-        <div className="h-full flex flex-col justify-center max-w-7xl mx-auto px-6 pt-24 pb-12 overflow-y-auto custom-scrollbar">
+    return (
+        <div className="flex flex-col justify-center max-w-7xl mx-auto px-6 pt-32 pb-24">
 
             {/* Split Layout: Act III - The Signal */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
