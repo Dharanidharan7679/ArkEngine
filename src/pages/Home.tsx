@@ -55,7 +55,7 @@ export const Home = () => {
                             onClick={() => navigate('/contact')}
                             className="group flex items-center gap-4 px-10 py-4 bg-white text-black text-[11px] font-black uppercase tracking-[0.4em] hover:bg-white/90 transition-all"
                         >
-                            Sync Mission
+                            Contact
                             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                         </button>
                     </div>

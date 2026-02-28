@@ -50,8 +50,8 @@ export const Contact = () => {
                             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">Protocol 04 // Contact</span>
                         </div>
                         <h2 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.85]">
-                            Sync <br />
-                            <span className="italic font-normal opacity-70 lowercase tracking-normal">Mission</span>.
+                            Con <br />
+                            <span className="italic font-normal opacity-70 lowercase tracking-normal">tact</span>.
                         </h2>
                         <p className="text-lg text-white/70 max-w-md leading-relaxed font-medium">
                             The signal is open for elite ventures, institutional scale-ups, and specialized deep-tech engineering queries.

@@ -62,7 +62,7 @@ const AppContent = () => {
                                 { name: 'Home', path: '/' },
                                 { name: 'Capabilities', path: '/services' },
                                 { name: 'The Archive', path: '/portfolio' },
-                                { name: 'Sync Mission', path: '/contact' },
+                                { name: 'Contact', path: '/contact' },
                             ].map((item) => (
                                 <Link
                                     key={item.path}
