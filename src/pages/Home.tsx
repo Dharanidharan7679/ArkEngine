@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import heroV2 from '../assets/hero_v2.png'
+import { VantaBackground } from '../components/VantaBackground'
 
 export const Home = () => {
     const navigate = useNavigate()
@@ -9,22 +9,10 @@ export const Home = () => {
     return (
         <div className="relative h-full flex flex-col items-center justify-center max-w-7xl mx-auto px-6 overflow-hidden">
 
-            {/* Cinematic Backdrop Asset */}
-            <motion.div
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 0.4, scale: 1 }}
-                transition={{ duration: 2, ease: "easeOut" }}
-                className="absolute inset-0 z-0 pointer-events-none"
-            >
-                <img
-                    src={heroV2}
-                    alt=""
-                    className="w-full h-full object-cover filter brightness-[0.6] contrast-[1.2] grayscale-[0.3]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
-            </motion.div>
+            {/* Cinematic Vanta Clouds (The "Same Home Page of Cloud") */}
+            <VantaBackground />
 
-            {/* Main Content: "Act I - The Origin" */}
+            {/* Main Content: "Act I - The Origin" (Premium v2 Layout) */}
             <div className="relative z-10 w-full flex flex-col items-center text-center space-y-16">
 
                 <motion.div

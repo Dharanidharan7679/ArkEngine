@@ -18,14 +18,14 @@ export const VantaBackground: React.FC = () => {
                 gyroControls: false,
                 minHeight: 200.00,
                 minWidth: 200.00,
-                backgroundColor: 0x000000,
-                skyColor: 0x010101,
-                cloudColor: 0x1e293b,
-                cloudShadowColor: 0x0f172a,
+                backgroundColor: 0x050507, // Ultra dark
+                skyColor: 0x08080a,
+                cloudColor: 0x121215, // Subtle dark grey clouds
+                cloudShadowColor: 0x050505,
                 sunColor: 0x000000,
                 sunGlareColor: 0x000000,
                 sunlightColor: 0x000000,
-                speed: 0.5,
+                speed: 0.8,
             })
         }
         return () => {
