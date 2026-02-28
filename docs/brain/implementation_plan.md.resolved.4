@@ -1,0 +1,40 @@
+# Implementation Plan: Rebrand and Cleanup Ark-Engine
+
+The goal is to simplify the website by removing the "Crew" section, cleaning up the "ARK" background text from the Home page, and updating the footer to exclusively feature the founder's name ("Dharma").
+
+## User Review Required
+
+> [!IMPORTANT]
+> I have identified "Dharma" as the founder based on the "Principal Architect" role in the Crew page. Please confirm if this is correct or provide the specific name you'd like to use.
+
+## Proposed Changes
+
+### [Component Name] Portfolio Enhancement
+
+#### [MODIFY] [Portfolio.tsx](file:///d:/Ark-Engine/src/pages/Portfolio.tsx)
+- Implement unique, high-end CSS-based logos for:
+    - Kongu Blood Bank (Red/White medical/heart theme)
+    - Luminary Studios (Light/Gradient aesthetic)
+    - PulseWave Corp (Dynamic pulse/wave lines)
+    - OrbitMobile Labs (Circular/Orbital orbits)
+    - IronCore Robotics (Metallic/Industrial structural lines)
+
+### [Component Name] Global UI Experience
+
+#### [MODIFY] [App.tsx](file:///d:/Ark-Engine/src/App.tsx)
+- Add a `LoadingScreen` component that simulates a "System Boot" or "Ark Protocol" initiation.
+- Use `framer-motion` for text-glitch and progress bar animations.
+- Show the loading screen for 2-3 seconds on initial mount.
+
+### [Component Name] Content Refinement
+
+#### [MODIFY] [Contact.tsx](file:///d:/Ark-Engine/src/pages/Contact.tsx)
+- Update "Sector 7, Neo Tokyo" to something more professional like "Tech Hub, South India" or "Global Infrastructure Division".
+- Ensure all links in the footer are functional or clearly labeled as demo links.
+
+## Verification Plan
+
+### Manual Verification
+- Verify the floating box appears on all pages.
+- Ensure the animation is smooth and feels premium.
+- Confirm "FOUNDER" is highlighted and the name is correctly positioned.

@@ -1,0 +1,24 @@
+# Task: Rebrand and Cleanup Ark-Engine
+
+- [x] Planning and Research
+- [x] Remove "Crew" Page
+    - [x] Delete [src/pages/Crew.tsx](file:///d:/Ark-Engine/src/pages/Crew.tsx)
+    - [x] Remove references in [App.tsx](file:///d:/Ark-Engine/src/App.tsx) (navigation, routing, scroll logic)
+    - [x] Remove images from `src/assets` if they are only used in Crew page
+- [x] Remove "Light Ark" Background
+    - [x] Remove large "ARK" background text from `src/pages/Home.tsx`
+- [x] Identify Founder Name ("Dharma")
+- [x] Remove copyright string from `src/pages/Contact.tsx`
+- [x] Implement Animated Founder Box
+    - [x] Design floating box component in `App.tsx`
+    - [x] Remove legacy text credits from `App.tsx` and `Contact.tsx`
+- [x] Redesign Founder Box with Logo
+    - [x] Update `App.tsx` with larger square and company logo
+    - [x] Center "FOUNDER" and "DHARMA" around logo
+- [x] Portfolio Logo Integration
+- [x] Restructure Founder Box Visibility
+- [x] Final Polish (The Last 5%)
+    - [x] Design unique CSS logos for all Portfolio projects
+    - [x] Implement "Boot Sequence" loading screen in `App.tsx`
+    - [x] Refine contact info and external links
+- [x] Verification

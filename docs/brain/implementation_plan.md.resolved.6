@@ -1,0 +1,37 @@
+# Performance & Design Optimization Plan
+
+Address user feedback regarding lagging performance and typography professionalism.
+
+## User Review Required
+
+> [!NOTE]
+> I will be switching the body font to **Inter** (clean, professional) while keeping **Outfit** for bold, futuristic headers. This is a standard combination for premium tech websites.
+
+## Proposed Changes
+
+### [Component Name] Performance Optimization
+
+#### [MODIFY] [VantaBackground.tsx](file:///d:/Ark-Engine/src/components/VantaBackground.tsx)
+- Refactor `useEffect` to properly manage the Vanta lifecycle.
+- Implement a robust cleanup function to prevent memory leaks and GPU overhead when navigating away from the home page.
+- Add performance-friendly options to the Vanta Clouds effect.
+
+### [Component Name] Typography & Visual Polish
+
+#### [MODIFY] [index.css](file:///d:/Ark-Engine/src/index.css)
+- Import and set **Inter** as the default sans font for better readability and professionalism.
+- Define specific scale for headers using **Outfit** with improved `letter-spacing` and `line-height`.
+- Refine global "glass" and "gradient" utilities for subtler, more premium effects.
+
+#### [MODIFY] [App.tsx](file:///d:/Ark-Engine/src/App.tsx)
+- Add Inter font import via Google Fonts.
+
+## Verification Plan
+
+### Automated Tests
+- Check console for any Three.js or Vanta-related warnings/errors.
+
+### Manual Verification
+- **Performance**: Navigate between pages multiple times and check if the site remains smooth.
+- **Visuals**: Review the new typography on all pages to ensure it looks "more professional."
+- **Home Animation**: Confirm Vanta background only runs on Home and stops correctly on others.

@@ -1,0 +1,13 @@
+# Task: Rebrand and Cleanup Ark-Engine
+
+- [/] Planning and Research
+- [ ] Remove "Crew" Page
+    - [ ] Delete [src/pages/Crew.tsx](file:///d:/Ark-Engine/src/pages/Crew.tsx)
+    - [ ] Remove references in [App.tsx](file:///d:/Ark-Engine/src/App.tsx) (navigation, routing, scroll logic)
+    - [ ] Remove images from `src/assets` if they are only used in Crew page
+- [ ] Remove "Light Ark" Background
+    - [ ] Remove large "ARK" background text from `src/pages/Home.tsx`
+- [ ] Update Footer with Founder Name
+    - [ ] Identify Founder Name (Assume "Dharma")
+    - [ ] Update `App.tsx` footer or `Contact.tsx` footer as requested
+- [ ] Verification

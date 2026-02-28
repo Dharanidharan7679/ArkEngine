@@ -1,0 +1,34 @@
+# EmailJS Integration Plan
+
+Integrate EmailJS into the [Contact](file:///d:/Ark-Engine/src/pages/Contact.tsx#6-200) page to enable real email submissions from the contact form.
+
+## User Review Required
+
+> [!IMPORTANT]
+> I need your **Template ID** to finalize the integration. You provided the Public Key and Service ID, but the Template ID is also required to send the email. I will use a placeholder `YOUR_TEMPLATE_ID` for now.
+
+## Proposed Changes
+
+### [Component Name] EmailJS Integration
+
+#### [NEW] Dependency
+- Install `@emailjs/browser` via npm.
+
+#### [MODIFY] [Contact.tsx](file:///d:/Ark-Engine/src/pages/Contact.tsx)
+- Import `emailjs` from `@emailjs/browser`.
+- Initialize `emailjs` in a `useEffect` hook using the provided Public Key.
+- Update the form to use `useRef` for the form element.
+- Implement the `sendEmail` function to trigger `emailjs.sendForm`.
+- Add state for handling "Sending...", "Success", and "Error" messages.
+- Ensure form inputs have `name` attributes (e.g., `user_name`, `user_email`, `message`).
+
+## Verification Plan
+
+### Automated Tests
+- N/A (requires manual form submission check).
+
+### Manual Verification
+- Fill out the contact form and click "Submit".
+- Verify that "Sending..." state appears.
+- Verify that a success message appears after submission.
+- User should check their EmailJS dashboard/inbox to confirm receipt.

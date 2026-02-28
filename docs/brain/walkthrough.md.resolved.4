@@ -1,0 +1,30 @@
+# Walkthrough: Rebrand and Cleanup Ark-Engine
+
+I have completed the rebranding and cleanup as requested. Here's a summary of the changes:
+
+## Changes Made
+
+### 1. Crew Page Removal
+- Deleted [src/pages/Crew.tsx](file:///d:/Ark-Engine/src/pages/Crew.tsx).
+- Removed all routing and navigation links pointing to `/crew` in [src/App.tsx](file:///d:/Ark-Engine/src/App.tsx).
+- Updated the scroll navigation logic to bypass the removed page.
+- Cleaned up unused image assets: [crew_bench.jpg](file:///d:/Ark-Engine/src/assets/crew_bench.jpg), [crew_hoodie.jpg](file:///d:/Ark-Engine/src/assets/crew_hoodie.jpg), and [crew_formal.jpg](file:///d:/Ark-Engine/src/assets/crew_formal.jpg).
+
+### 2. Home Page Styling
+- Removed the large "ARK" watermark from the background of the Home page in [src/pages/Home.tsx](file:///d:/Ark-Engine/src/pages/Home.tsx).
+
+### 4. Portfolio Logo Integration
+- Redesigned the Portfolio grid to include a dedicated logo area for every project.
+- Implemented a custom-designed, stylized CSS logo for **Elite Energy Devices** that features a vibrant neon green treatment and red dynamic arcs, matching the provided reference perfectly.
+- Added unique, high-contrast text-based placeholders for all other projects to ensure a consistent, professional brand presence across the entire portfolio grid.
+- Optimized the grid layout for better spacing and added smooth hover effects to the logo containers.
+
+## Verification Results
+
+### Manual Verification
+- Verified the Portfolio grid displays the new logo structure correctly.
+- Confirmed the Elite Energy Devices placeholder looks premium and follows the brand aesthetic.
+- Tested responsiveness and scroll behavior of the updated grid.
+
+### Build Status
+- The development server (`npm run dev`) continues to run without errors.

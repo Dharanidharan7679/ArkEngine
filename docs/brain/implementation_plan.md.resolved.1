@@ -1,0 +1,27 @@
+# Implementation Plan: Rebrand and Cleanup Ark-Engine
+
+The goal is to simplify the website by removing the "Crew" section, cleaning up the "ARK" background text from the Home page, and updating the footer to exclusively feature the founder's name ("Dharma").
+
+## User Review Required
+
+> [!IMPORTANT]
+> I have identified "Dharma" as the founder based on the "Principal Architect" role in the Crew page. Please confirm if this is correct or provide the specific name you'd like to use.
+
+## Proposed Changes
+
+### [Component Name] Footer Redesign
+
+#### [MODIFY] [App.tsx](file:///d:/Ark-Engine/src/App.tsx)
+- Implement a floating animated square box at the bottom center.
+- The box will contain "FOUNDER" (highlighted) and "DHARMA" (below it).
+- Use `framer-motion` for a subtle floating animation.
+
+#### [MODIFY] [Contact.tsx](file:///d:/Ark-Engine/src/pages/Contact.tsx)
+- Remove the local founder/engine text to avoid redundancy with the new global floating credit.
+
+## Verification Plan
+
+### Manual Verification
+- Verify the floating box appears on all pages.
+- Ensure the animation is smooth and feels premium.
+- Confirm "FOUNDER" is highlighted and the name is correctly positioned.

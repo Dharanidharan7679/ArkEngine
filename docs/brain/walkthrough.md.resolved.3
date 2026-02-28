@@ -1,0 +1,30 @@
+# Walkthrough: Rebrand and Cleanup Ark-Engine
+
+I have completed the rebranding and cleanup as requested. Here's a summary of the changes:
+
+## Changes Made
+
+### 1. Crew Page Removal
+- Deleted [src/pages/Crew.tsx](file:///d:/Ark-Engine/src/pages/Crew.tsx).
+- Removed all routing and navigation links pointing to `/crew` in [src/App.tsx](file:///d:/Ark-Engine/src/App.tsx).
+- Updated the scroll navigation logic to bypass the removed page.
+- Cleaned up unused image assets: `crew_bench.jpg`, `crew_hoodie.jpg`, and `crew_formal.jpg`.
+
+### 2. Home Page Styling
+- Removed the large "ARK" watermark from the background of the Home page in [src/pages/Home.tsx](file:///d:/Ark-Engine/src/pages/Home.tsx).
+
+### 3. Premium Logo & Founder Box
+- Upgraded the floating credit to a larger, more prominent square box (200x200px) centered at the bottom.
+- Integrated the company **Logo** at the heart of the square, creating a cohesive brand mark.
+- The word **FOUNDER** is prominently highlighted at the top, while the name **DHARMA** is elegantly spaced at the bottom.
+- The entire assembly features a smooth 5-second floating loop, significantly enhancing the premium feel of the interface.
+
+## Verification Results
+
+### Manual Verification
+- Navigated through the site using the menu and scroll wheel; the "Crew" section is completely gone, and the flow is seamless.
+- Confirmed the Home page background is now clean without the "ARK" text.
+- Verified the footer consistently displays the founder's name on all pages.
+
+### Build Status
+- The development server (`npm run dev`) continues to run without errors.

@@ -1,0 +1,41 @@
+# Task: Rebrand and Cleanup Ark-Engine
+
+- [x] Planning and Research
+- [x] Remove "Crew" Page
+    - [x] Delete `src/pages/Crew.tsx`
+    - [x] Remove references in `App.tsx` (navigation, routing, scroll logic)
+    - [x] Remove images from `src/assets` if they are only used in Crew page
+- [x] Remove "Light Ark" Background
+    - [x] Remove large "ARK" background text from `src/pages/Home.tsx`
+- [x] Identify Founder Name ("Dharma")
+- [x] Remove copyright string from `src/pages/Contact.tsx`
+- [x] Implement Animated Founder Box
+    - [x] Design floating box component in `App.tsx`
+    - [x] Remove legacy text credits from `App.tsx` and `Contact.tsx`
+- [x] Redesign Founder Box with Logo
+    - [x] Update `App.tsx` with larger square and company logo
+    - [x] Center "FOUNDER" and "DHARMA" around logo
+- [x] Portfolio Logo Integration
+- [x] Restructure Founder Box Visibility
+- [x] Final Polish (The Last 5%)
+    - [x] Design unique CSS logos for all Portfolio projects
+    - [x] Implement "Boot Sequence" loading screen in `App.tsx`
+    - [x] Refine contact info and external links
+    - [x] Integrate KGF Holidays logo in `Portfolio.tsx`
+- [x] Verification
+- [x] EmailJS Contact Form Integration
+    - [x] Install `@emailjs/browser`
+    - [x] Initialize EmailJS in `Contact.tsx`
+    - [x] Implement `sendForm` logic in Contact form
+    - [x] Add success/error feedback UI
+- [x] Final Aesthetic Refinement
+    - [x] Restrict Vanta animation to Home page only
+    - [x] Optimize Vanta performance and cleanup
+    - [x] Refine global typography and font hierarchy
+- [x] Professional UI Overhaul
+    - [x] Implement global design system (index.css)
+    - [x] Generate premium hero assets
+    - [x] Redesign Home page layout
+    - [x] Redesign Services page layout
+    - [x] Clean up Contact page UI
+- [x] Verification

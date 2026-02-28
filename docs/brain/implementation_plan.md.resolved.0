@@ -1,0 +1,37 @@
+# Implementation Plan: Rebrand and Cleanup Ark-Engine
+
+The goal is to simplify the website by removing the "Crew" section, cleaning up the "ARK" background text from the Home page, and updating the footer to exclusively feature the founder's name ("Dharma").
+
+## User Review Required
+
+> [!IMPORTANT]
+> I have identified "Dharma" as the founder based on the "Principal Architect" role in the Crew page. Please confirm if this is correct or provide the specific name you'd like to use.
+
+## Proposed Changes
+
+### [Component Name] Routing and Navigation
+
+#### [MODIFY] [App.tsx](file:///d:/Ark-Engine/src/App.tsx)
+- Remove [Crew](file:///d:/Ark-Engine/src/pages/Crew.tsx#107-166) import.
+- Remove `/crew` from the `pages` array in [ScrollNavigator](file:///d:/Ark-Engine/src/App.tsx#12-43).
+- Remove the "Crew" link from the navigation bar.
+- Remove the `/crew` route from the main content.
+- Update the footer to display only the founder's name instead of page numbers.
+
+### [Component Name] Home Page
+
+#### [MODIFY] [Home.tsx](file:///d:/Ark-Engine/src/pages/Home.tsx)
+- Remove the "ARK" background text `motion.div`.
+
+### [Component Name] Cleanup
+
+#### [DELETE] [Crew.tsx](file:///d:/Ark-Engine/src/pages/Crew.tsx)
+- Delete the entire Crew page component.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run dev` to ensure the application builds and runs without errors.
+- Manually verify that the "Crew" link is gone and the "/crew" route is inaccessible.
+- Verify that the background on the Home page no longer shows the "ARK" watermark.
+- Verify the footer displays the founder's name.
