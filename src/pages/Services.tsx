@@ -27,7 +27,6 @@ const capabilities = [
 
 export const Services = () => {
     return (
-    return (
         <div className="flex flex-col justify-center max-w-7xl mx-auto px-6 pt-32 pb-24">
 
             {/* Section Header: Act II - The Execution */}
@@ -50,7 +49,7 @@ export const Services = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
-                    className="text-lg text-white/30 max-w-sm mb-2 font-medium leading-relaxed"
+                    className="text-lg text-white/60 max-w-sm mb-2 font-medium leading-relaxed"
                 >
                     We deploy elite squads to solve the most complex segments of the modern technical ecosystem.
                 </motion.p>
@@ -88,7 +87,7 @@ export const Services = () => {
 
                         {/* Arrow Link */}
                         <div className="lg:col-span-1 flex justify-end mt-6 lg:mt-0">
-                            <ArrowUpRight className="w-5 h-5 text-white/10 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                            <ArrowUpRight className="w-5 h-5 text-white/30 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                         </div>
                     </motion.div>
                 ))}

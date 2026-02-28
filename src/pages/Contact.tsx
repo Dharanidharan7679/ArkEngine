@@ -33,7 +33,6 @@ export const Contact = () => {
     }
 
     return (
-    return (
         <div className="flex flex-col justify-center max-w-7xl mx-auto px-6 pt-32 pb-24">
 
             {/* Split Layout: Act III - The Signal */}
