@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 0%;
+        --background-soft: 232 25% 5%;
+        /* #0a0b10 */
+        --foreground: 0 0% 100%;
+        --primary: 0 0% 100%;
+        --primary-foreground: 0 0% 0%;
+        --muted: 232 15% 15%;
+        --border: 0 0% 100%;
+        --secondary: 232 20% 10%;
+        --secondary-foreground: 0 0% 100%;
+        --accent: 232 50% 60%;
+        --accent-foreground: 0 0% 100%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-white/10;
+    }
+
+    body {
+        @apply bg-background text-foreground antialiased selection:bg-white/10;
+        font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Outfit', sans-serif;
+        @apply tracking-tighter uppercase font-black;
+    }
+
+    p,
+    span,
+    div,
+    input,
+    textarea {
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+.glass {
+    @apply bg-white/[0.02] backdrop-blur-2xl border border-white/[0.05];
+}
+
+.glass-dark {
+    @apply bg-black/40 backdrop-blur-3xl border border-white/5;
+}
+
+.text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-white/30;
+}
+
+.bg-soft {
+    background-color: hsl(var(--background-soft));
+}
+
+.bg-grid {
+    background-size: 60px 60px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}
